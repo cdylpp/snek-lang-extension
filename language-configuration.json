@@ -18,7 +18,7 @@
     },
     "folding": {
         "markers": {
-            "start": "^\\s*\\((fun|let|block|loop)\\b",
+            "start": "^\\s*\\((fun|block)\\b",
             "end": "^\\s*\\)"
         }
     },

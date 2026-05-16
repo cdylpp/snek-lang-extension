@@ -10,16 +10,34 @@
     "Programming Languages"
   ],
   "contributes": {
-    "languages": [{
-      "id": "snek-lang",
-      "aliases": ["snek", "snek-lang"],
-      "extensions": [".snek"],
-      "configuration": "./language-configuration.json"
-    }],
-    "grammars": [{
-      "language": "snek-lang",
-      "scopeName": "source.snek",
-      "path": "./syntaxes/snek-lang.tmLanguage.json"
-    }]
+    "languages": [
+      {
+        "id": "snek-lang",
+        "aliases": [
+          "snek",
+          "snek-lang"
+        ],
+        "extensions": [
+          ".snek"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "snek-lang",
+        "scopeName": "source.snek",
+        "path": "./syntaxes/snek-lang.tmLanguage.json"
+      }
+    ]
+  },
+  "dependencies": {
+    "vscode-languageclient": "^9.0.1",
+    "vscode-languageserver": "^9.0.1",
+    "vscode-languageserver-textdocument": "^1.0.12"
+  },
+  "devDependencies": {
+    "@types/node": "^25.8.0",
+    "typescript": "^6.0.3"
   }
 }
