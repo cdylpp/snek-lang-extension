@@ -1,0 +1,25 @@
+{
+  "name": "snek",
+  "displayName": "snek-lang-support",
+  "description": "language support for snek",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.120.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "snek-lang",
+      "aliases": ["snek", "snek-lang"],
+      "extensions": [".snek"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "snek-lang",
+      "scopeName": "source.snek",
+      "path": "./syntaxes/snek-lang.tmLanguage.json"
+    }]
+  }
+}

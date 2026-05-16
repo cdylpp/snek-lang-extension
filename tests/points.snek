@@ -1,0 +1,22 @@
+(fun (create_point x y)
+    (vec x y))
+
+(fun (add_points p1 p2)
+    (if (= (vec-len p1) 2)
+        (if (= (vec-len p2) 2)
+            (vec (+ (vec-get p1 0) (vec-get p2 0)) (+ (vec-get p1 1) (vec-get p2 1)))
+            false)
+        false))
+
+(let ((p1 (create_point 4 5)) (p2 (create_point -4 2)) (p3 (create_point 2 0)) (p4 (create_point 3 -9)))
+    (block
+        (print p1)
+        (print p2)
+        (print (add_points p1 p2))
+        (print (add_points p1 p1))
+        (print p3)
+        (print p4)
+        (print (add_points p3 p4))
+        (print (add_points p4 p3))
+        (print (add_points p1 p4))
+        (add_points (add_points p1 p2) (add_points p3 p4))))

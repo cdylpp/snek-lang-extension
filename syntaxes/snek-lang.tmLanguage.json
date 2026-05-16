@@ -1,0 +1,65 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "snek",
+	"patterns": [
+		{
+			"include": "#comments"
+		},
+		{
+			"include": "#numbers"
+		},
+		{
+			"include": "#constants"
+		},
+		{
+			"include": "#definition"
+		},
+		{
+			"include": "#forms"
+		},
+		{
+			"include": "#operators"
+		},
+		{
+			"include": "#punctuation"
+		},
+		{
+			"include": "#identifiers"
+		}
+	],
+	"repository": {
+		"comments": {
+			"name": "comment.line.double-colon.snek",
+			"match": "::.*$"
+		},
+		"numbers": {
+			"name": "constant.numeric.integer.snek",
+			"match": "(?<![^\\s(])-?\\d+(?![^\\s)])"
+		},
+		"constants": {
+			"name": "constant.language.snek",
+			"match": "(?<![^\\s(])(true|false|input|nil)(?![^\\s)])"
+		},
+		"definition": {
+			"name": "keyword.declaration.function.snek",
+			"match": "(?<=\\()fun(?=\\s)"
+		},
+		"forms": {
+			"name": "keyword.control.snek",
+			"match": "(?<=\\()(let|set!|if|block|loop|break|vec|vec-get|vec-set|vec-len)(?=\\s|\\))"
+		},
+		"operators": {
+			"name": "keyword.operator.snek",
+			"match": "(?<=\\()(add1|sub1|isnum|isbool|print|\\+|-|\\*|<|>|>=|<=|=)(?=\\s|\\))"
+		},
+		"punctuation": {
+			"name": "punctuation.section.parens.snek",
+			"match": "[()]"
+		},
+		"identifiers": {
+			"name": "variable.other.snek",
+			"match": "(?<![^\\s()])[^\\s()]+(?![^\\s()])"
+		}
+	},
+	"scopeName": "source.snek"
+}

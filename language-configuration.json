@@ -1,0 +1,33 @@
+{
+    "comments": {
+        "lineComment": "::"
+    },
+    "brackets": [
+        ["(", ")"]
+    ],
+    "autoClosingPairs": [
+        ["(", ")"]
+    ],
+    "surroundingPairs": [
+        ["(", ")"]
+    ],
+    "wordPattern": "([^\\s()]+)",
+    "indentationRules": {
+        "increaseIndentPattern": "^.*\\([^)]*$",
+        "decreaseIndentPattern": "^\\s*\\)"
+    },
+    "folding": {
+        "markers": {
+            "start": "^\\s*\\((fun|let|block|loop)\\b",
+            "end": "^\\s*\\)"
+        }
+    },
+    "onEnterRules": [
+        {
+            "beforeText": "^\\s*\\((fun|let|if|block|loop|set!|break|vec|vec-get|vec-set|vec-len)\\b.*$",
+            "action": {
+                "indent": "indent"
+            }
+        }
+    ]
+}

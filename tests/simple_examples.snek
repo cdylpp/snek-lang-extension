@@ -1,0 +1,22 @@
+(let (
+    (v1 (vec 1 2 3)) 
+    (v2 (vec false true)) 
+    (v3 
+        (vec 0 true (vec 4 3 (vec 2 1)) (vec 11 22 33) true)
+    ))
+    (block
+        (print v1)
+        (print v2)
+        (print v3)
+        (print (vec-get v2 1))
+        (print (vec-get (vec-get (vec-get v3 2) 2) 0))
+        (print (vec-len v1))
+        (print (vec-len v3))
+        (print (vec-len (vec-get v3 2)))
+        (vec-set v1 0 100)
+        (print v1)
+        (print (vec-len (vec-set v2 0 (vec 9 8 7 6))))
+        (print (vec-get v2 0))
+        (vec-set (vec-get v3 2) 0 400)
+    )
+)
