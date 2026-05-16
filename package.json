@@ -6,6 +6,14 @@
   "engines": {
     "vscode": "^1.120.0"
   },
+  "main": "./client/out/extension.js",
+  "activationEvents": [
+    "onLanguage:snek-lang"
+  ],
+  "scripts": {
+    "compile": "tsc -p ./client/tsconfig.json",
+    "build-server": "cargo build --manifest-path server/Cargo.toml"
+  },
   "categories": [
     "Programming Languages"
   ],

@@ -1,4 +1,6 @@
 def myFunc(x, y, z):
+    vec = [x, True, False, 0]
+    print(vec)
     return sum(x, y, z)
 
 

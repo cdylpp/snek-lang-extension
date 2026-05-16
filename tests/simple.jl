@@ -6,3 +6,4 @@ function echo(s)
     println(s)
 end
 
+myMat = [0 0 true];
