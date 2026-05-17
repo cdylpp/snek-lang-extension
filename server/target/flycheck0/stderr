@@ -1,50 +1,12 @@
-   0.031721916s  INFO prepare_target{force=false package_id=snek-lsp v0.1.0 (/Users/codylepp/Dev/snek extension/snek-ext/snek/server/snek-lsp) target="snek-lsp"}: cargo::core::compiler::fingerprint: fingerprint error for snek-lsp v0.1.0 (/Users/codylepp/Dev/snek extension/snek-ext/snek/server/snek-lsp)/Check { test: false }/TargetInner { name: "snek-lsp", doc: true, ..: with_path("/Users/codylepp/Dev/snek extension/snek-ext/snek/server/snek-lsp/src/main.rs", Edition2024) }
-   0.031738000s  INFO prepare_target{force=false package_id=snek-lsp v0.1.0 (/Users/codylepp/Dev/snek extension/snek-ext/snek/server/snek-lsp) target="snek-lsp"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/codylepp/Dev/snek extension/snek-ext/snek/server/snek-lsp/target/debug/.fingerprint/snek-lsp-16c141fd13f5cc74/bin-snek-lsp`
-
-Caused by:
-    No such file or directory (os error 2)
-
-Stack backtrace:
-   0: <std::backtrace::Backtrace>::create
-   1: cargo_util::paths::read_bytes
-   2: cargo_util::paths::read
-   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
-   4: cargo::core::compiler::fingerprint::prepare_target
-   5: cargo::core::compiler::compile
-   6: <cargo::core::compiler::build_runner::BuildRunner>::compile
-   7: cargo::ops::cargo_compile::compile_ws
-   8: cargo::ops::cargo_compile::compile_with_exec
-   9: cargo::ops::cargo_compile::compile
-  10: cargo::commands::check::exec
-  11: <cargo::cli::Exec>::exec
-  12: cargo::main
-  13: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
-  14: std::rt::lang_start::<()>::{closure#0}
-  15: std::rt::lang_start_internal
-  16: _main
-   0.037925083s  INFO prepare_target{force=false package_id=snek-lsp v0.1.0 (/Users/codylepp/Dev/snek extension/snek-ext/snek/server/snek-lsp) target="snek-lsp"}: cargo::core::compiler::fingerprint: fingerprint error for snek-lsp v0.1.0 (/Users/codylepp/Dev/snek extension/snek-ext/snek/server/snek-lsp)/Check { test: true }/TargetInner { name: "snek-lsp", doc: true, ..: with_path("/Users/codylepp/Dev/snek extension/snek-ext/snek/server/snek-lsp/src/main.rs", Edition2024) }
-   0.037934833s  INFO prepare_target{force=false package_id=snek-lsp v0.1.0 (/Users/codylepp/Dev/snek extension/snek-ext/snek/server/snek-lsp) target="snek-lsp"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/codylepp/Dev/snek extension/snek-ext/snek/server/snek-lsp/target/debug/.fingerprint/snek-lsp-66b8dad5490a51e2/test-bin-snek-lsp`
-
-Caused by:
-    No such file or directory (os error 2)
-
-Stack backtrace:
-   0: <std::backtrace::Backtrace>::create
-   1: cargo_util::paths::read_bytes
-   2: cargo_util::paths::read
-   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
-   4: cargo::core::compiler::fingerprint::prepare_target
-   5: cargo::core::compiler::compile
-   6: <cargo::core::compiler::build_runner::BuildRunner>::compile
-   7: cargo::ops::cargo_compile::compile_ws
-   8: cargo::ops::cargo_compile::compile_with_exec
-   9: cargo::ops::cargo_compile::compile
-  10: cargo::commands::check::exec
-  11: <cargo::cli::Exec>::exec
-  12: cargo::main
-  13: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
-  14: std::rt::lang_start::<()>::{closure#0}
-  15: std::rt::lang_start_internal
-  16: _main
-    Checking snek-lsp v0.1.0 (/Users/codylepp/Dev/snek extension/snek-ext/snek/server/snek-lsp)
-    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.10s
+   0.084225791s  INFO prepare_target{force=false package_id=snek-lsp v0.1.0 (/Users/codylepp/Dev/snek extension/snek-ext/snek/server) target="snek-lsp"}: cargo::core::compiler::fingerprint: stale: changed "/Users/codylepp/Dev/snek extension/snek-ext/snek/server/src/main.rs"
+   0.084236166s  INFO prepare_target{force=false package_id=snek-lsp v0.1.0 (/Users/codylepp/Dev/snek extension/snek-ext/snek/server) target="snek-lsp"}: cargo::core::compiler::fingerprint:           (vs) "/Users/codylepp/Dev/snek extension/snek-ext/snek/server/target/debug/.fingerprint/snek-lsp-70693dcecfde84a1/dep-bin-snek-lsp"
+   0.084239125s  INFO prepare_target{force=false package_id=snek-lsp v0.1.0 (/Users/codylepp/Dev/snek extension/snek-ext/snek/server) target="snek-lsp"}: cargo::core::compiler::fingerprint:                FileTime { seconds: 1778994649, nanos: 974638697 } < FileTime { seconds: 1778994821, nanos: 639762761 }
+   0.084332583s  INFO prepare_target{force=false package_id=snek-lsp v0.1.0 (/Users/codylepp/Dev/snek extension/snek-ext/snek/server) target="snek-lsp"}: cargo::core::compiler::fingerprint: fingerprint dirty for snek-lsp v0.1.0 (/Users/codylepp/Dev/snek extension/snek-ext/snek/server)/Check { test: false }/TargetInner { name: "snek-lsp", doc: true, ..: with_path("/Users/codylepp/Dev/snek extension/snek-ext/snek/server/src/main.rs", Edition2024) }
+   0.084339416s  INFO prepare_target{force=false package_id=snek-lsp v0.1.0 (/Users/codylepp/Dev/snek extension/snek-ext/snek/server) target="snek-lsp"}: cargo::core::compiler::fingerprint:     dirty: FsStatusOutdated(StaleItem(ChangedFile { reference: "/Users/codylepp/Dev/snek extension/snek-ext/snek/server/target/debug/.fingerprint/snek-lsp-70693dcecfde84a1/dep-bin-snek-lsp", reference_mtime: FileTime { seconds: 1778994649, nanos: 974638697 }, stale: "/Users/codylepp/Dev/snek extension/snek-ext/snek/server/src/main.rs", stale_mtime: FileTime { seconds: 1778994821, nanos: 639762761 } }))
+   0.089538958s  INFO prepare_target{force=false package_id=snek-lsp v0.1.0 (/Users/codylepp/Dev/snek extension/snek-ext/snek/server) target="snek-lsp"}: cargo::core::compiler::fingerprint: stale: changed "/Users/codylepp/Dev/snek extension/snek-ext/snek/server/src/main.rs"
+   0.089545000s  INFO prepare_target{force=false package_id=snek-lsp v0.1.0 (/Users/codylepp/Dev/snek extension/snek-ext/snek/server) target="snek-lsp"}: cargo::core::compiler::fingerprint:           (vs) "/Users/codylepp/Dev/snek extension/snek-ext/snek/server/target/debug/.fingerprint/snek-lsp-b7d013467e8b90d1/dep-test-bin-snek-lsp"
+   0.089546750s  INFO prepare_target{force=false package_id=snek-lsp v0.1.0 (/Users/codylepp/Dev/snek extension/snek-ext/snek/server) target="snek-lsp"}: cargo::core::compiler::fingerprint:                FileTime { seconds: 1778994649, nanos: 974620073 } < FileTime { seconds: 1778994821, nanos: 639762761 }
+   0.089591166s  INFO prepare_target{force=false package_id=snek-lsp v0.1.0 (/Users/codylepp/Dev/snek extension/snek-ext/snek/server) target="snek-lsp"}: cargo::core::compiler::fingerprint: fingerprint dirty for snek-lsp v0.1.0 (/Users/codylepp/Dev/snek extension/snek-ext/snek/server)/Check { test: true }/TargetInner { name: "snek-lsp", doc: true, ..: with_path("/Users/codylepp/Dev/snek extension/snek-ext/snek/server/src/main.rs", Edition2024) }
+   0.089594916s  INFO prepare_target{force=false package_id=snek-lsp v0.1.0 (/Users/codylepp/Dev/snek extension/snek-ext/snek/server) target="snek-lsp"}: cargo::core::compiler::fingerprint:     dirty: FsStatusOutdated(StaleItem(ChangedFile { reference: "/Users/codylepp/Dev/snek extension/snek-ext/snek/server/target/debug/.fingerprint/snek-lsp-b7d013467e8b90d1/dep-test-bin-snek-lsp", reference_mtime: FileTime { seconds: 1778994649, nanos: 974620073 }, stale: "/Users/codylepp/Dev/snek extension/snek-ext/snek/server/src/main.rs", stale_mtime: FileTime { seconds: 1778994821, nanos: 639762761 } }))
+    Checking snek-lsp v0.1.0 (/Users/codylepp/Dev/snek extension/snek-ext/snek/server)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.19s
