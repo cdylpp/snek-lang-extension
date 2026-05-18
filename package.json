@@ -37,7 +37,28 @@
         "scopeName": "source.snek",
         "path": "./syntaxes/snek-lang.tmLanguage.json"
       }
-    ]
+    ],
+    "snippets": [
+      {
+        "language": "snek-lang",
+        "path": "./snippets/snek.json"
+      }
+    ],
+    "configurationDefaults": {
+      "[snek-lang]": {
+        "editor.semanticHighlighting.enabled": true,
+        "editor.semanticTokenColorCustomizations": {
+          "rules": {
+            "function.declaration:snek-lang": {
+              "fontStyle": "italic"
+            },
+            "parameter.declaration:snek-lang": {
+              "fontStyle": "italic"
+            }
+          }
+        }
+      }
+    }
   },
   "dependencies": {
     "vscode-languageclient": "^9.0.1",
