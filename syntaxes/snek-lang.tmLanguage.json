@@ -29,8 +29,8 @@
 	],
 	"repository": {
 		"comments": {
-			"name": "comment.line.double-colon.snek",
-			"match": "::.*$"
+			"name": "comment.line.semicolon.snek",
+			"match": ";;.*$"
 		},
 		"numbers": {
 			"name": "constant.numeric.integer.snek",
