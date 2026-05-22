@@ -28,6 +28,15 @@
             "action": {
                 "indent": "indent"
             }
-        }
+        },
+        {
+            "beforeText": "(?<!\\\\|\\w:);;\\s*\\S",
+            "afterText": "^(?!\\s*$).+",
+            "action": {
+                "indent": "none",
+                "appendText": ";; "
+            }
+
+        },
     ]
 }

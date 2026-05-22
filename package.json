@@ -2,7 +2,9 @@
   "name": "snek",
   "displayName": "snek-lang-support",
   "description": "language support for snek",
-  "version": "0.0.1",
+  "version": "0.1.1",
+  "publisher": "cdylpp",
+  "license": "MIT",
   "engines": {
     "vscode": "^1.120.0"
   },
@@ -68,5 +70,9 @@
   "devDependencies": {
     "@types/node": "^25.8.0",
     "typescript": "^6.0.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cdylpp/snek-lang-extension"
   }
 }
