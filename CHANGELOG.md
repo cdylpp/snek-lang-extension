@@ -6,6 +6,15 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 ## [Unreleased]
 
+## [0.2.0] - 2026-05-22
+
+- Bundled the Rust language server as a release binary loaded from `<target>/server/bin`.
+- Added a workspace-local `snek` parser crate so the server build no longer depends on an absolute local path.
+- Added platform build and packaging automation for `darwin-arm64`, `darwin-x64`, `linux-x64`, `linux-arm64`, and `win32-x64`.
+- Updated packaging excludes so published VSIXs omit Rust source, Cargo build output, tests, scripts, source maps, and local development files.
+
+## [0.1.1] - 2026-05-22
+
 - Initial Snek language support for `.snek` files.
 - Added TextMate syntax highlighting for Snek forms, operators, constants, numbers, identifiers, parentheses, and `;;` comments.
 - Added language configuration for comments, parentheses, indentation, folding for `fun` and `block` forms, and Snek word boundaries.

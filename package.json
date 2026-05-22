@@ -2,7 +2,7 @@
   "name": "snek",
   "displayName": "snek-lang-support",
   "description": "language support for snek",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "publisher": "cdylpp",
   "license": "MIT",
   "engines": {
@@ -13,8 +13,11 @@
     "onLanguage:snek-lang"
   ],
   "scripts": {
+    "vscode:prepublish": "npm run compile",
     "compile": "tsc -p ./client/tsconfig.json",
-    "build-server": "cargo build --manifest-path server/Cargo.toml"
+    "build-server": "cargo build --release --manifest-path server/Cargo.toml",
+    "build-server:targets": "node scripts/build-server.js darwin-arm64 darwin-x64 linux-x64 linux-arm64 win32-x64",
+    "package:targets": "node scripts/build-server.js --package darwin-arm64 darwin-x64 linux-x64 linux-arm64 win32-x64"
   },
   "categories": [
     "Programming Languages"

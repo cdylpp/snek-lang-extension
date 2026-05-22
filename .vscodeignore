@@ -2,3 +2,15 @@
 .vscode-test/**
 .gitignore
 vsc-extension-quickstart.md
+scripts/**
+tests/**
+dist/**
+server/src/**
+server/crates/**
+server/Cargo.toml
+server/Cargo.lock
+server/bin/**
+server/target/**
+client/src/**
+client/tsconfig.json
+**/*.map

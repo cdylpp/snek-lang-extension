@@ -15,13 +15,33 @@ Snek is a first-principles language development project used for teaching and co
 
 This extension requires Visual Studio Code `^1.120.0`.
 
-The language server is built with Rust. Before running the extension locally, build the server:
+Published builds include the Snek language server. Users do not need Rust, Cargo, or the Snek compiler repository installed.
+
+Supported extension targets:
+
+- macOS Apple Silicon: `darwin-arm64`
+- macOS Intel: `darwin-x64`
+- Linux x64: `linux-x64`
+- Linux ARM64: `linux-arm64`
+- Windows x64: `win32-x64`
+
+## Development
+
+The language server is built with Rust. Before running the extension locally, build the release server:
 
 ```sh
 npm run build-server
 ```
 
-The extension expects the debug language server binary at `server/target/debug/snek-lsp` on macOS/Linux or `server/target/debug/snek-lsp.exe` on Windows.
+For platform-specific VSIX builds, build and package the supported targets:
+
+```sh
+npm run package:targets
+```
+
+Cross-platform builds require the matching Rust target standard libraries and linkers. The macOS targets can be built on macOS; Linux and Windows targets should be built on matching CI runners or on a machine configured with compatible cross linkers.
+
+The extension loads the bundled server from `<target>/server/bin/snek-lsp` on macOS/Linux or `<target>/server/bin/snek-lsp.exe` on Windows.
 
 ## Extension Settings
 
@@ -34,5 +54,4 @@ It does set default editor behavior for Snek files:
 
 ## Known Issues
 
-- The language server must be built locally before the extension can start it.
 - Language support is intentionally basic and focused on early compiler-learning workflows.

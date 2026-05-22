@@ -3,7 +3,10 @@ name = "snek-lsp"
 version = "0.1.0"
 edition = "2024"
 
+[workspace]
+members = ["crates/snek"]
+
 [dependencies]
 tokio = { version = "1", features = ["full"] }
 tower-lsp = "0.20.0"
-snek = {path = "/Users/codylepp/Dev/rustprojects/snek-lang/crates/snek"}
+snek = { path = "crates/snek" }
