@@ -33,6 +33,12 @@ const extensionTargets = selectedTargets.length > 0 ? selectedTargets : Object.k
 const root = path.resolve(__dirname, "..");
 const serverDir = path.join(root, "server");
 const packageJson = require(path.join(root, "package.json"));
+const vsceBin = path.join(
+  root,
+  "node_modules",
+  ".bin",
+  os.platform() === "win32" ? "vsce.cmd" : "vsce"
+);
 
 function run(command, args, options = {}) {
   const result = spawnSync(command, args, {
@@ -92,7 +98,7 @@ for (const target of extensionTargets) {
 
   if (packageVsix) {
     fs.mkdirSync(path.join(root, "dist"), { recursive: true });
-    run("vsce", [
+    run(vsceBin, [
       "package",
       "--target",
       target,
