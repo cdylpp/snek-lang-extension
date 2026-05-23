@@ -23,6 +23,12 @@
     "Programming Languages"
   ],
   "contributes": {
+    "iconThemes": [
+      {
+        "id": "sneks",
+        "label": "s"
+      }
+    ],
     "languages": [
       {
         "id": "snek-lang",
@@ -33,7 +39,11 @@
         "extensions": [
           ".snek"
         ],
-        "configuration": "./language-configuration.json"
+        "configuration": "./language-configuration.json",
+        "icon": {
+          "light": "./icons/snake-svg-3.svg",
+          "dark": "./icons/snake-svg-3.svg"
+        }
       }
     ],
     "grammars": [
