@@ -108,5 +108,23 @@ jobs:
           fi
 
           for file in "${files[@]}"; do
-            npx --no-install vsce publish --packagePath "$file"
+            echo "Publishing $file"
+
+            set +e
+            output=$(npx --no-install vsce publish --packagePath "$file" 2>&1)
+            status=$?
+            set -e
+
+            echo "$output"
+
+            if [ "$status" -eq 0 ]; then
+              continue
+            fi
+
+            if echo "$output" | grep -q "already exists"; then
+              echo "Skipping $file because this version/target is already published."
+              continue
+            fi
+
+            exit "$status"
           done

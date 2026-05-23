@@ -6,6 +6,10 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 ## [Unreleased]
 
+## [0.3.1] - 2026-05-22
+
+- Added GitHub Actions to build targets and publish using `vsce`.
+
 ## [0.2.0] - 2026-05-22
 
 - Bundled the Rust language server as a release binary loaded from `<target>/server/bin`.
